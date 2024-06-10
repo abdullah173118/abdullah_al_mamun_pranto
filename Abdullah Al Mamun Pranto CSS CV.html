@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>My CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .full {
+            width: 80%;
+            max-width: 1200px;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .header, .left, .middle, .right {
+            padding: 20px;
+        }
+
+        .header {
+            background-color: teal;
+            color: #fff;
+            grid-column: 1 / -1;
+            text-align: center;
+        }
+
+        .left {
+            background-color: teal;
+            color: #fff;
+            transition: background-color 0.5s ease;
+        }
+
+        .left:hover {
+            background-color: #008080;
+        }
+
+        .contact, .skills, .language {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .image-container {
+            position: relative;
+            width: 90%;
+            height: auto;
+            margin-bottom: 30px;
+            overflow: visible;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.5);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .resume, .summary, .experience, .education, .address {
+            margin-bottom: 30px;
+        }
+
+        .middle {
+            background-color: lightCyan;
+            text-align: center; /* Center align text within the middle section */
+            color: #000; /* Set text color to black */
+        }
+
+        .middle .header {
+            background-color: transparent; /* Ensure the header within middle is transparent */
+            color: #000; /* Set text color to black */
+            margin-bottom: 20px; /* Adjust spacing if needed */
+        }
+
+        .middle .header h1 {
+            margin-bottom: 10px; /* Adjust spacing if needed */
+        }
+
+        .middle .header p {
+            margin-bottom: 20px; /* Adjust spacing if needed */
+        }
+
+        .right {
+            background-color: wheat;
+            text-align: left;
+            padding: 50px;
+        }
+
+        #customers {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid DarkSlateGray;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: lightCyan;
+        }
+
+        #customers th {
+            padding: 12px 8px;
+            text-align: left;
+            background-color: lightCyan;
+            color: #000;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="full middle">
+        <div class="header">
+            <h1>Abdullah Al Mamun Pranto</h1>
+            <p>Web Developer</p>
+        </div>
+        <div class="left" id="left-section">
+            <div class="image-container">
+                <img src="https://scontent.fbzl5-1.fna.fbcdn.net/v/t31.18172-8/28424522_2108763996074424_3867003345767280034_o.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHaMvjOhWJYUFNEBnvVU72x66g4z3-rPNTrqDjPf6s81NkkDTkJ1elrPmMV6Zb-p2PxNv7M8b5vgyNBSpJ8HDIO&_nc_ohc=Q77TVrfZaLQQ7kNvgFUOA_R&_nc_ht=scontent.fbzl5-1.fna&oh=00_AYCgMh3tiJJNi8CpEes8_dih50JjULpEYUyvEj4KMLTPDA&oe=66881890" alt="Profile Image">
+            </div>
+            <div class="resume">
+                <h1>Resume</h1>
+                <p>OF</p>
+                <p> ABDULLAH AL MAMUN PRANTO</p>
+            </div>
+            <div class="contact">
+                <h2>Contact</h2>
+                <p><b>E-Mail Id:</b> <a href="https://mail.google.com/mail/u/0/#inbox">abdulah173118@gmail.com</a></p>
+                <p><b>Mobile No:</b> +8801795768141</p>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <ol>Microsoft Word, Excel, PowerPoint</ol>
+                    <ol>Critical Thinking</ol>
+                    <ol>Communication Skills</ol>
+                    <ol>Can Drive Motorcycle and Car</ol>
+                    <ol>Mushroom Cultivation</ol>
+                </ul>
+            </div>
+            <div class="language">
+                <h2>Language</h2>
+                <ul>
+                    <ol>English</ol>
+                    <ol>Bangla</ol>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="middle">
+            <div class="summary">
+                <h2>Summary</h2>
+                <p>To secure a challenging position in a reputable organization to expand my learning, knowledge, and skills.</p>
+            </div>
+
+            
+            <div class="education">
+                <h2>Education</h2>
+                <table id="customers">
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Institute</th>
+                        <th>Group</th>
+                        <th>Passing Year</th>
+                        <th>Board</th>
+                        <th>GPA</th>
+                    </tr>
+                    <tr>
+                        <td>H.S.C</td>
+                        <td>Balla Coronation High School & College</td>
+                        <td>Science</td>
+                        <td>2020</td>
+                        <td>Dhaka</td>
+                        <td>4.75</td>
+                    </tr>
+                    <tr>
+                        <td>S.S.C</td>
+                        <td>Anahola High School</td>
+                        <td>Science</td>
+                        <td>2018</td>
+                        <td>Dhaka</td>
+                        <td>4.72</td>
+                    </tr>
+                    <tr>
+                        <td>J.S.C</td>
+                        <td>Shaheen School</td>
+                        <td>N/A</td>
+                        <td>2016</td>
+                        <td>Dhaka</td>
+                        <td>4.62</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="address">
+                <h2>Address</h2>
+                <address>
+                    Road: Upazila Road, Village: Purba Adalat Para.<br>
+                    Post Office: Tangail, Post code: 1900<br>
+                    Upazila: Tangail, Zila: Tangail<br>
+                    BANGLADESH
+                </address>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Personal Information</h2>
+            <table>
+                <tr>
+                    <td><strong>Name</strong></td>
+                    <td>:</td>
+                    <td>Abdullah Al Mamun Pranto</td>
+                </tr>
+                <tr>
+                    <td><strong>Father's Name</strong></td>
+                    <td>:</td>
+                    <td>MD. Hitlar Miah</td>
+                </tr>
+                <tr>
+                    <td><strong>Mother's Name</strong></td>
+                    <td>:</td>
+                    <td>MST. Parul Akter</td>
+                </tr>
+                <tr>
+                    <td><strong>Date of Birth</strong></td>
+                    <td>:</td>
+                    <td>26.05.2002</td>
+                </tr>
+                <tr>
+                    <td><strong>Nationality</strong></td>
+                    <td>:</td>
+                    <td>Bangladeshi By Birth</td>
+                </tr>
+                <tr>
+                    <td><strong>NID Number</strong></td>
+                    <td>:</td>
+                    <td>82611418698</td>
+                </tr>
+                <tr>
+                    <td><strong>Gender</strong></td>
+                    <td>:</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td><strong>Height</strong></td>
+                    <td>:</td>
+                    <td>5' 8"</td>
+                </tr>
+                <tr>
+                    <td><strong>Weight</strong></td>
+                    <td>:</td>
+                    <td>80kg</td>
+                </tr>
+                <tr>
+                    <td><strong>Blood Group</strong></td>
+                    <td>:</td>
+                    <td>A(+ve)</td>
+                </tr>
+                <tr>
+                    <td><strong>Mobile No</strong></td>
+                    <td>:</td>
+                    <td>+8801795768141</td>
+                </tr>
+                <tr>
+                    <td><strong>Present Address</strong></td>
+                    <td>:</td>
+                    <td>Road: Upazila Road, Village: Purba Adalat Para, Post Office: Tangail, Post code: 1900, Upazila: Tangail, Zila: Tangail</td>
+                </tr>
+                <tr>
+                    <td><strong>Permanent Address</strong></td>
+                    <td>:</td>
+                    <td>Road: Upazila Road, Village: Purba Adalat Para, Post Office: Tangail, Post code: 1900, Upazila: Tangail, Zila: Tangail</td>
+                </tr>
+                <tr>
+                    <td><strong>Religion</strong></td>
+                    <td>:</td>
+                    <td>Islam</td>
+                </tr>
+                <tr>
+                    <td><strong>Marital Status</strong></td>
+                    <td>:</td>
+                    <td>Unmarried</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.getElementById('left-section').addEventListener('mouseover', () => {
+            document.querySelectorAll('.contact, .skills, .language').forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateX(0)';
+                }, index * 150);
+            });
+        });
+
+        document.getElementById('left-section').addEventListener('mouseout', () => {
+            document.querySelectorAll('.contact, .skills, .language').forEach((element) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateX(-20px)';
+            });
+        });
+    </script>
+</body>
+</html>
